@@ -1,79 +1,189 @@
 <!DOCTYPE html>
 <html>
-  <head>
- <title>Home Page </title>
-    <style>
-      h1 { font-size: 45px;
-         font-family: Montserrat;
-         font-weight: normal;
-         text-align: center;}
-       h2 { font-size: 30px;
-         font-family: Montserrat;
-         font-weight: normal;
-         text-align: center;}
-      .paragraf { font-size: 18px;
-         font-family:   roboto;
-         font-weight: normal;}
-		td {
-			border: 1px solid #999;
-			padding: 0.1em 1em;
-		}
-      #banner{width: 100%;
-             height: 360px;
-             object-fit:cover;
-             text-align:center;}
-      #tubuh{ max-width: 720px;
-              margin : 0 auto 0 auto;
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="templates/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Roboto:wght@100;300;400;500;700&family=Sen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  *{margin: 0;}
+  html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  .navbar {
+    width: 100%;
+    height: 50px;
+    background-color: darkblue;
+  }
+  .navbar-container{
+    display: flex;
+    allign-items: center;
+    background-color: darkblue;
+    padding: 0 50px;
+    height: 100%;
+    font-weight: bolder;
+    color: lightcoral;
+    font-family: 'Alice', serif;
+  }
+  .navbar-logo{
+    flex: 2;
+    
+  }
+  
+  .navbar-menu{
+    flex: 6;
+    
+  }
+  .menu-list{display : flex;
+            color : lightcoral;
+            list-style:none;}
+  
+  .list-home{margin-right: 30px;
+             margin-top: 10px;
             }
-      .bawah{font-size: 12px;
-         font-family:   roboto;
-         font-weight: normal;
-          text-align:center;}
-	</style>
-  </head>
-  <body> <div id="tubuh">
-<h1>     MyMovieList 1.1 version   </h1>
-  </body>
-  <img id="banner" src="https://webproject.ananda-melvyn-f.repl.co/static/Banner.jpg" width="320" height="" >
-  <h2>About MyMovieList </h2>
-  <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea dictumst vestibulum rhoncus. Id eu nisl nunc mi. Urna nunc id cursus metus aliquam. Sed vulputate odio ut enim blandit. Ac turpis egestas maecenas pharetra convallis posuere. Purus viverra accumsan in nisl. At tellus at urna condimentum mattis pellentesque id nibh. Egestas diam in arcu cursus euismod quis viverra nibh cras. Tellus at urna condimentum mattis pellentesque id nibh. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. At auctor urna nunc id cursus metus. Semper auctor neque vitae tempus quam pellentesque. Arcu non sodales neque sodales ut etiam sit amet nisl. Adipiscing commodo elit at imperdiet dui. Proin fermentum leo vel orci porta non pulvinar. Amet nisl purus in mollis nunc. Nulla pellentesque dignissim enim sit amet venenatis urna cursus. Convallis tellus id interdum velit laoreet id. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere.</p>
-  <h2> Recent Movie List </h2>
-  <table>
-		<tr>
-			<td>Cats</td>
-			<td>Dogs</td>
-			<td>Lemurs</td>
-		</tr>
-		<tr>
-			<td>Tiger</td>
-			<td>Grey Wolf</td>
-			<td>Indri</td>
-		</tr>
-		<tr>
-			<td>Cheetah</td>
-			<td>Cape hunting dog</td>
-			<td>Sifaka</td>
-		</tr>
-		<tr>
-			<td>Caracal</td>
-			<td>Red fox</td>
-			<td>Brown lemur</td>
-		</tr>
-		<tr>
-			<td>Wildcat</td>
-			<td>Fennec</td>
-			<td>Dwarf lemur</td>
-		</tr>
-	</table>
-  <h2>List of Contributor </h2>
-  <ul>
-        <li>Rio</li>
-        <li>To show off</li>
-        <li>Because I've fallen in love with my computer and want to give her some HTML loving.</li>
-    </ul>
-  <div style="text-align : center;">
-  <button>Contact  </button>
+  
+   .navbar-profile{
+    flex: 2;
+    display: flex;
+    align-items: center;
+     justify-content: flex-end;
+    
+     
+   }
+  .navbar-contact{
+    flex: 2;
+    justify-content: flex-end;
+    margin-left: 20px;
+  }
+  .profile-picture{ width:32px;
+                  height:32px;
+                  border-radius:50%;
+                  object-fit: cover;
+                  }
+  .profile-information{margin: 0 20px;}
+  
+  .profile-night{
+                width: 40px;
+                height: 20px;
+                border-radius: 25px;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                
+  }
+  .night-gambar{
+  color: yellowgreen;
+    margin-top: 2px;
+  }
+  .night-toggle{
+    width: 18px;
+    height: 18px;
+    background-color: azure;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+  }
+ 
+  .contact{
+          font-size: 30px;
+          margin-right: 30px;
+          margin-bottom: 10px;
+          text-align: right;
+          margin-top: 0;
+  }
+  .sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: darkblue;
+    position: fixed;
+    top : 0 ;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .sidebar-icon{color: lightblue;
+              margin-bottom: 50px;
+              font-size: 30px;
+               }
+  .main{background-color: #34568b;
+        height: calc(100vh - 50px);
+      }
+
+
+  .isi-banner{width: 100%; 
+    height: 30vh;
+    object-fit: cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #34568b),       
+     url("static/Banner.jpg");
+              text-align: center;
+             }
+             
+  .inspiratif{
+  color: whitesmoke;
+  font-family: 'Alice', serif;
+  padding-top: 40px;}
+  
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo"><h1 class="logo">MovieList</h1></div>
+      <div class="navbar-menu">
+          <ul class="menu-list">
+              <li class="list-home">Home</li>
+             <li class="list-home">Latest</li>
+             <li class="list-home">Film</li>
+             <li class="list-home">Series</li>
+             <li class="list-home">Language</li>
+             <li class="list-home">Animation</li>
+          </ul>
+      </div>
+      
+      <div class="navbar-profile">
+        <img class="profile-picture"src="static/Banner.jpg"></img>
+        <div class="profile-information">
+            <span class="information-name">Rio</span>
+              <i class="fa-solid fa-square-caret-down"></i>
+          </div>
+          <div class="profile-night">
+              <i class="fa-regular fa-moon night-gambar"></i>
+              <i class="fa-solid fa-sun night-gambar"></i>
+              <div class="night-toggle">          </div>
+            
+          </div>
+            
+                  
+      </div>
+      <div class="navbar-contact"><h1 class="contact">Contact</h1></div>
+    </div>
+   </div>
+
+  <div class="sidebar">
+    <i class="fa-solid fa-bars sidebar-icon"></i>
+    <i class="fa-solid fa-house sidebar-icon"></i>
+    <i class="fa-solid fa-play sidebar-icon"></i>
+    <i class="fa-solid fa-address-card sidebar-icon"></i>
+    <i class="fa-solid fa-comment sidebar-icon"></i>
+    <i class="fa-solid fa-users-rectangle sidebar-icon"></i>
 </div>
-  <p class="bawah">FAQ</p>
+<div class="main">
+  <div class="main-isi">
+    <div class="isi-banner"><h1 class="inspiratif">Imagination Awaits</h1>
+     
+    </div>
+    
   </div>
+
+
+  
+</div>  
+</body>
 </html>
