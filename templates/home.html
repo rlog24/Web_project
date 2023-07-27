@@ -112,15 +112,19 @@
               margin-bottom: 50px;
               font-size: 30px;
                }
-  .main{background-color: #34568b;
-        height: calc(100vh - 50px);
+  .main{background-color: #132257;
+        min-height: calc(100vh - 50px);
+         margin-left: 50px;
+         font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+      color: lightcoral;
       }
 
 
   .isi-banner{width: 100%; 
     height: 30vh;
     object-fit: cover;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #34568b),       
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #132257),       
      url("static/Banner.jpg");
               text-align: center;
              }
@@ -128,7 +132,76 @@
   .inspiratif{
   color: whitesmoke;
   font-family: 'Alice', serif;
+  font-weight: bolder;
   padding-top: 40px;}
+
+  .isi-bagianfilm{
+    padding: 20px;
+  }
+  .film-list{
+          display: flex;
+          align-items: center;
+          height: 300px;
+          padding-top: 20px;
+           }
+  
+  .film-isi{margin-right: 30px;
+           position: relative;}
+
+  .film-isi:hover .isi-img{
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+  }
+  .film-isi:hover .film-judul,.film-isi:hover .film-deskripsi,.film-isi:hover .film-tonton{opacity: 1;
+    transition: all 1s ease-in-out;                                                                                      }
+  
+  .isi-img{
+        transition: all 1s ease-in-out;
+         height: 270px;
+         width: 200px;
+         object-fit: cover;
+         
+    }
+  .film-judul{
+  width: 150px;
+  padding: 0 10px;
+  position: absolute;
+  background-color: black;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bolder;
+  top: 25%;
+  left: 60px;
+  opacity: 0;
+  }
+
+  .film-deskripsi{
+  position: absolute;
+  padding: 0 10px;
+  background-color: black;
+  align-items: center;
+  font-size: 12px;
+  top: 50%;
+  left: 40px;
+  width: 230px;
+  opacity: 0;
+  }
+  .film-tonton{position: absolute;
+              top: 75%;
+              align-items: center;
+              left: 60px;
+              bottom: 20px;
+              background-color: burlywood;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 15px;
+              opacity: 0;}
+  
+  .isi-bagianfilm-text{font-weight: bolder;
+    color: lightcoral;
+    font-family: 'Alice', serif;}
   
 </style>
 </head>
@@ -176,13 +249,131 @@
 </div>
 <div class="main">
   <div class="main-isi">
-    <div class="isi-banner"><h1 class="inspiratif">Imagination Awaits</h1>
-     
-    </div>
-    
+    <div class="isi-banner"><h1 class="inspiratif">"Discover the Magic of Cinema - Your Ultimate Movie Destination!"</h1>
+      </div>
+  <div class="isi-bagianfilm">
+    <h1 class="isi-bagianfilm-text">Latest</h1>
+      <div class="wrapper-film">
+        <div class="film-list">
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster1-oppenheimer.jpg"></img>
+              <span class="film-judul">Oppenheimer</span>
+                <p class="film-deskripsi">The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+            <div class="film-isi">
+            <img class="isi-img"src="static/poster2-haunted-mansion.jpg"></img>
+              <span class="film-judul">Haunted Mansion</span>
+                <p class="film-deskripsi">A single mom named Gabbie hires a tour guide, a psychic, a priest and a historian to help exorcise her newly bought mansion after discovering it is inhabited by ghosts.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posterbarbie.jpg"></img>
+              <span class="film-judul">Barbie</span>
+                <p class="film-deskripsi">Barbie suffers a crisis that leads her to question her world and her existence.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster3-mission-impossible.jpg"></img>
+              <span class="film-judul">Mission Impossible</span>
+                <p class="film-deskripsi">Ethan Hunt and his IMF team must track down a dangerous weapon before it falls into the wrong hands.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster6-insidious.jpg"></img>
+              <span class="film-judul">Insidious</span>
+                <p class="film-deskripsi">The Lamberts must go deeper into The Further than ever before to put their demons to rest once and for all.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster5-detective-conan.jpg"></img>
+              <span class="film-judul">Detective Conan</span>
+                <p class="film-deskripsi">Detective Conan has returned for this summer blockbuster</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+      </div>
+      <h1 class="isi-bagianfilm-text">Action</h1>
+      <div class="wrapper-film">
+        <div class="film-list">
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster3-mission-impossible.jpg"></img>
+              <span class="film-judul">Mission Impossible</span>
+                <p class="film-deskripsi">Ethan Hunt and his IMF team must track down a dangerous weapon before it falls into the wrong hands.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+            <div class="film-isi">
+            <img class="isi-img"src="static/poster2-haunted-mansion.jpg"></img>
+              <span class="film-judul">Haunted Mansion</span>
+                <p class="film-deskripsi">A single mom named Gabbie hires a tour guide, a psychic, a priest and a historian to help exorcise her newly bought mansion after discovering it is inhabited by ghosts.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+         <div class="film-isi">
+            <img class="isi-img"src="static/poster5-detective-conan.jpg"></img>
+              <span class="film-judul">Detective Conan</span>
+                <p class="film-deskripsi">Detective Conan has returned for this summer blockbuster</p>
+                <button class="film-tonton">Watch Now</button>
+</div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posterfastx.jpg"></img>
+              <span class="film-judul">Fast and Furios X</span>
+                <p class="film-deskripsi">Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster9-pacificrim.jpg"></img>
+              <span class="film-judul">Pacific Rim</span>
+                <p class="film-deskripsi">As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to save the world from the apocalypse.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster10-transformer.jpg"></img>
+              <span class="film-judul">Transformer Rise of The Beast</span>
+                <p class="film-deskripsi">During the '90s, a new faction of Transformers - the Maximals - join the Autobots as allies in the battle for Earth.</p>
+                <button class="film-tonton">Watch Now</button>
+</div>
   </div>
-
-
+</div>
+    <h1 class="isi-bagianfilm-text">Romance</h1>
+      <div class="wrapper-film">
+        <div class="film-list">
+          <div class="film-isi">
+            <img class="isi-img"src="static/poster20thcentury.jpg"></img>
+              <span class="film-judul">20TH Century Girl</span>
+                <p class="film-deskripsi">In 1999, a teen with a heart of gold begins keeping close tabs on a popular classmate as a favor to her smitten best friend..</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+            <div class="film-isi">
+            <img class="isi-img"src="static/poster2-haunted-mansion.jpg"></img>
+              <span class="film-judul">Haunted Mansion</span>
+                <p class="film-deskripsi">A single mom named Gabbie hires a tour guide, a psychic, a priest and a historian to help exorcise her newly bought mansion after discovering it is inhabited by ghosts.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posterbarbie.jpg"></img>
+              <span class="film-judul">Barbie</span>
+                <p class="film-deskripsi">Barbie suffers a crisis that leads her to question her world and her existence.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posternoel.jpg"></img>
+              <span class="film-judul">The Noel Diary</span>
+                <p class="film-deskripsi">The story of a man who returns home on Christmas to settle his estranged mother's estate..</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posterLifeisBeautiful.jpg"></img>
+              <span class="film-judul">Life is Beautifull</span>
+                <p class="film-deskripsi">A musical drama about a wife who asks her husband to help her find her childhood sweetheart as a birthday present..</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+          <div class="film-isi">
+            <img class="isi-img"src="static/posterNothing.jpg"></img>
+              <span class="film-judul">Nothing is Impossible</span>
+                <p class="film-deskripsi">When an NBA team suddenly announces open tryouts, a high school janitor gets a second chance at both love and life.</p>
+                <button class="film-tonton">Watch Now</button>
+            </div>
+      </div>
+</div>
   
 </div>  
 </body>
